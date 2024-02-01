@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <neta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Cart Quantity</title>
+      <style>
+  
+      </style>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button class="show" onclick="console.log(`Cart Quantity: ${quantity}`);">Show Quantity</button>
+    <button class="add1" onclick="
+      console.log(`Cart Quantity: ${quantity +=1}`);">Add to Cart</button>
+    <button class="add2" onclick="
+      console.log(`Cart Quantity: ${quantity+=2}`);">+2</button>
+    <button class="add3" onclick="
+          console.log(`Cart Quantity: ${quantity=quantity+3}`);">+3</button>
+    <button class="reset" onclick="console.log(`Cart Quantity: ${quantity=0}`);">Reset Cart</button>
+
+      <script>
+        let quantity = 0;
+       
+      </script>
+  </body>
+</html>
