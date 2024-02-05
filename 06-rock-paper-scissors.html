@@ -12,31 +12,56 @@
   <p>Rock Paper Scissors</p>
   <div class="choice">
     <button id="rock" onclick="
-      const randomNumber = Math.random();
-      if(randomNumber <=1/3){
-      alert('You chose Paper, Computer chose rock, Tie')">
-      )">Rock
-    </button>
+    function();
+      console.log(randomNumber);
+      if(randomNumber >= 0 && randomNumber<1/3){
+        alert('You chose Rock, Computer chose rock, Tie')
+      }
+      else if(randomNumber >= 1/3 && randomNumber < 2/3){
+        alert('You chose Rock, Computer chose paper, You lose')
+      }
+      else if (randomNumber >= 2/3 && randomNumber <= 1){
+        alert('You chose Rock, Computer chose Scissors, You win')
+      }
+      ">Rock</button>
 
     <button id="paper" onclick="
-      const randomNumber = Math.random();
-      if(randomNumber <=1/3){
-      alert('You chose Paper, Computer chose rock, Tie')">
-
+    function();
+      console.log(randomNumber);
+      if(randomNumber >= 0 && randomNumber<1/3){
+        alert('You chose Paper, Computer chose rock, You Win')
       }
+      else if(randomNumber >= 1/3 && randomNumber < 2/3){
+        alert('You chose Paper, Computer chose paper, Tie')
       }
-      Paper</button>
+      else if (randomNumber >= 2/3 && randomNumber <= 1){
+        alert('You chose Paper, Computer chose Scissors, You Lose')
+      }
+      ">Paper</button>
 
-    <button id="scissors" onclick="alert('You chose')">
-      Scissors</button>
+    <button id="scissors" onclick="
+    function();
+      console.log(randomNumber);
+      if(randomNumber >= 0 && randomNumber<1/3){
+        alert('You chose Scissors, Computer chose rock, You Lose')
+      }
+      else if(randomNumber >= 1/3 && randomNumber < 2/3){
+        alert('You chose Scissors, Computer chose paper, You Win')
+      }
+      else if (randomNumber >= 2/3 && randomNumber <= 1){
+        alert('You chose Scissors, Computer chose Scissors, Tie')
+      }
+    ">Scissors</button>
 </div>
 
 <div class="results">
   <p>Click here to see the final version of the project</p>
 </div>
-      <script>
-       
 
-      </script>
+      <script>
+        function(){
+          const randomNumber = Math.random();
+        }
+  </script>
   </body>
 </html>
