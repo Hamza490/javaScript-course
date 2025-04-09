@@ -9,9 +9,28 @@
       </style>
   </head>
   <body>
-    <button>Hello</button>
-      <script>
-        
-      </script>
+    <h1>Amazon Shipping Calculator</h1>
+    <p>Order under $40 = +$10 shipping.</p>
+    <p>Order over $40 = FREE shipping.</p>
+    <input type="text" placeholder="Cost of order">
+    <button>Calculate</button>
+    <p class="result"></p>
+    <script>
+      const btn = document.querySelector("button");
+      const input = document.querySelector("input");
+      const paragraph = document.querySelector(".result");
+
+      btn.addEventListener("click", ()=>{
+        const value = Number(input.value);
+
+        if(value<40){
+          paragraph.textContent=`$${value+10}`;
+        } else if(value>=40){
+          paragraph.textContent=`$${value}`;
+        }
+        input.value='';
+        input.focus();
+      })
+    </script>
   </body>
 </html>
