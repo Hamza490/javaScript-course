@@ -3,20 +3,71 @@
   <head>
     <meta charset="UTF-8">
     <neta name="viewport" content="width=device-width, initial-scale=1"/>
-      <title>DOM</title>
-      <style>
-  
-      </style>
+    <title>DOM</title>
+    <style>
+        body {
+        font-family: arial;
+      }
+      .subscribe{
+       border: none;
+       background-color: black;
+       color: white; 
+       padding-top: 10px;
+       padding-bottom: 10px;
+       padding-left: 15px;
+       padding-right: 15px;
+       font-weight: bold;
+       border-radius: 50px;
+       cursor: pointer;
+       margin-bottom: 30px;
+      }
+
+      .is-subscribed{
+       background-color: lightgrey;
+       color: black; 
+      }
+
+      .cost-input{
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate{
+        font-size: 15px;
+        padding: 12px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
+    <!--Youtube Portion-->
+    <p>Youtube Subscribe Button</p>
+    <button class="subscribe">Subscribe</button>
+
+    <!--Amazon Portion-->
     <h1>Amazon Shipping Calculator</h1>
     <p>Order under $40 = +$10 shipping.</p>
     <p>Order over $40 = FREE shipping.</p>
-    <input type="text" placeholder="Cost of order">
-    <button>Calculate</button>
+    <input type="text" placeholder="Cost of order" class="cost-input">
+    <button class="calculate">Calculate</button>
     <p class="result"></p>
     <script>
-      const btn = document.querySelector("button");
+      //Youtube Portion
+      const subscribeBtn = document.querySelector(".subscribe");
+      subscribeBtn.addEventListener('click', ()=>{
+        if(subscribeBtn.textContent==="Subscribe") {
+          subscribeBtn.textContent='Subscribed';
+          subscribeBtn.classList.add('is-subscribed');
+        } else if(subscribeBtn.textContent==="Subscribed") {
+          subscribeBtn.textContent="Subscribe";
+          subscribeBtn.classList.remove('is-subscribed');
+        }});
+      
+      //Amazon Portion
+      const btn = document.querySelector(".calculate");
       const input = document.querySelector("input");
       const paragraph = document.querySelector(".result");
 

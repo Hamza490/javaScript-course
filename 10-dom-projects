@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <neta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>DOM</title>
+      <style>
+  
+      </style>
+  </head>
+  <body>
+    <h1>Amazon Shipping Calculator</h1>
+    <p>Order under $40 = +$10 shipping.</p>
+    <p>Order over $40 = FREE shipping.</p>
+    <input type="text" placeholder="Cost of order">
+    <button>Calculate</button>
+    <p class="result"></p>
+    <script>
+      const btn = document.querySelector("button");
+      const input = document.querySelector("input");
+      const paragraph = document.querySelector(".result");
+
+      btn.addEventListener("click", ()=>{
+        const value = Number(input.value);
+
+        if(value<40){
+          paragraph.textContent=`$${value+10}`;
+        } else if(value>=40){
+          paragraph.textContent=`$${value}`;
+        }
+        input.value='';
+        input.focus();
+      })
+    </script>
+  </body>
+</html>
