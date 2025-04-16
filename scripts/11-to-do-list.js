@@ -3,7 +3,7 @@ let toDoList = [
 
 ]; 
 
-const btn = document.querySelector("button");
+const btn = document.querySelector(".add");
 
 // Add New Items to Array
 function addToDo() {
