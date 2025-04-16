@@ -2,19 +2,20 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <neta name="viewport" content="width=device-width, initial-scale=1"/>
-      <title>To Do List</title>
-      <style>
-  
-      </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles/11-to-do-list.css">
   </head>
   <body>
     <p>To Do List Practice 1</p>
-    <input placeholder="To Do Item">
-    <button class="mainInput" >Add</button>
-    <ul>
-
-    </ul>
+    
+    <div class="inputGrid">
+      <input placeholder="To Do Item" class="js-name-input name-input">
+      <input type="date" class="js-date date-input">
+      <button class="mainInput">Add</button>
+    </div>
+    
+    <div class="js-to-do-list"></div>
 
     <script src="scripts/11-to-do-list.js">
     </script>
