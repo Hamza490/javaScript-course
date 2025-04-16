@@ -10,7 +10,21 @@
       </style>
   </head>
   <body>
+    <button class="js-button">Click</button>
     <script>
+      const btn = document.querySelector('.js-button');
+
+      const eventListener = ()=>{
+        console.log('click');
+      }
+
+      btn.addEventListener('click', eventListener);
+
+      btn.removeEventListener('click',eventListener)
+      btn.addEventListener('click', ()=>{
+        console.log('click2');
+      })
+      /*
       /*
       function greeting(){
         console.log('hello');
@@ -38,7 +52,7 @@
 
         obj.fun();*/
 
-        
+
       
     </script>
   </body>
