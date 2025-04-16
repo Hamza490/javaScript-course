@@ -78,8 +78,8 @@
 
         function autoplay(){
           if(!isAutoPlaying){
-            autoPlayBtn.textContent="Playing";
-            intervalID = setInterval(function(){
+            autoPlayBtn.textContent="Stop Playing";
+            intervalID = setInterval(()=>{
               playGame(pickComputerMove());
             }, 1000);
             isAutoPlaying=true;

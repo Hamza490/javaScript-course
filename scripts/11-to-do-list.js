@@ -29,7 +29,7 @@ function addToDo() {
 function renderHTML() {
   let toDoListHTML='';
 
-  toDoList.forEach(function(itemObject, index){
+  toDoList.forEach((itemObject, index)=>{
     const { name, date } = itemObject;
 
     const html = ` <div class="toDo-grid">
@@ -42,7 +42,7 @@ function renderHTML() {
       `;
     toDoListHTML += html;
   });
-  
+
   /*
   for(let i=0; i<toDoList.length;i++){
     const itemObject = toDoList[i];
