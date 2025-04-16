@@ -1,5 +1,7 @@
 // The array that stores item Objects
-let toDoList = []; 
+let toDoList = [
+
+]; 
 
 const btn = document.querySelector("button");
 
@@ -27,6 +29,21 @@ function addToDo() {
 function renderHTML() {
   let toDoListHTML='';
 
+  toDoList.forEach(function(itemObject, index){
+    const { name, date } = itemObject;
+
+    const html = ` <div class="toDo-grid">
+      <div>${name}</div>
+      <div>${date}</div>
+      <button onclick="
+        toDoList.splice(${index}, 1);
+        renderHTML();
+      " class="deleteBtn">Delete</button></div>
+      `;
+    toDoListHTML += html;
+  });
+  
+  /*
   for(let i=0; i<toDoList.length;i++){
     const itemObject = toDoList[i];
     const { name, date } = itemObject;
@@ -40,7 +57,7 @@ function renderHTML() {
       " class="deleteBtn">Delete</button></div>
       `;
     toDoListHTML += html;
-  }
+  }*/
 
   const container = document.querySelector('.js-to-do-list');
   container.innerHTML = toDoListHTML;
