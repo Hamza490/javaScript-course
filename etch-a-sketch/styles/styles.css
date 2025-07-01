@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.container{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+
+  width: 750px;
+  height: 750px;
+
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.square{
+ border-width: 1px;
+ border-style: solid;
+ border-color: purple;
+ box-sizing: border-box;
+ width: 14px;
+ height: 14px;
+}
+
+.isHovered{
+  background-color: black;
+}
+
+.UserInput{
+  margin-top: 30px;
+}
